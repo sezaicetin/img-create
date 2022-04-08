@@ -42,7 +42,9 @@
 
 ## About The Library
 <div align="center">
+
   [![Product Name Screen Shot][product-screenshot]](https://github.yazilimi.org/img-create/)
+  
 </div>
 
 Thanks to the GD library, we can re-create and send image files (png, jpg, etc.) in an html page in the dimensions we need before sending them to the browser. When the image files to be resized are not found, the default image is created automatically.
