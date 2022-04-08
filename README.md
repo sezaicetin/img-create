@@ -7,7 +7,7 @@
 
 <br />
 <div align="center">
-    <a href="https://github.com/othneildrew/Best-README-Template">
+    <a href="https://github.com/sezaicetin/img-create">
         <img src="images/logo.png" alt="Logo" width="200" height="54">
     </a>
     <h3 align="center">IMG-CREATE</h3>
@@ -81,10 +81,16 @@ What we need: composer, php, gd
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-  * Composer
+  * Example 1
     ```php
     $img =  new sezaicetin\Create\img();
     $img->create(300, 300, '/img/test.png');
+    ```
+  * Example 2
+    ```php
+    $img =  new sezaicetin\Create\img('Company Name');
+    $img->create(500, 500, '/img/notfound');
+    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -92,7 +98,7 @@ Use this space to show useful examples of how a project can be used. Additional 
 
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -100,7 +106,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Sezai ÇETİN - [@your_linkedin](https://www.linkedin.com/in/sezaicetin) - sezai@3xcode.com
+Sezai ÇETİN - [@sezaicetin](https://www.linkedin.com/in/sezaicetin) - sezai@3xcode.com
 
 Library Link: [https://github.com/sezaicetin/img-create](https://github.com/sezaicetin/img-create)
 
@@ -120,6 +126,6 @@ Library Link: [https://github.com/sezaicetin/img-create](https://github.com/seza
 [contributors-url]: https://github.yazilimi.org/img-create/demo/
 [license-shield]: https://img.shields.io/static/v1?label=License&message=MIT&color=red
 [license-url]: https://github.com/sezaicetin/img-create/blob/master/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-shield]: https://img.shields.io/static/v1?label=Linked&message=in&color=blue
 [linkedin-url]: https://www.linkedin.com/in/sezaicetin
 [product-screenshot]: images/screenshot.png
