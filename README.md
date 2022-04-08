@@ -45,12 +45,13 @@
   [![Product Name Screen Shot][product-screenshot]](https://github.yazilimi.org/img-create/)
 </div>
 
-Thanks to the GD library, we can re-create and send image files (png, jpg, etc.) in an html page in the dimensions we need before sending them to the browser.
+Thanks to the GD library, we can re-create and send image files (png, jpg, etc.) in an html page in the dimensions we need before sending them to the browser. When the image files to be resized are not found, the default image is created automatically.
 
 What are the advantages of this for us?
 
 * Reducing bandwidth costs
 * Performance/Speed
+* Auto Default image when file not found
 
 It is a great waste to view image files that are uploaded at high levels, especially by unconscious or lazy users, without rescaling.
 
@@ -79,11 +80,11 @@ What we need: composer, php, gd
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+I would like to add a few examples of usage below to show how it is used.
 
   * Example 1
     ```php
-    $img =  new sezaicetin\Create\img();
+    $img =  new sezaicetin\Create\img('Company Name');
     $img->create(300, 300, '/img/test.png');
     ```
   * Example 2
@@ -91,6 +92,17 @@ Use this space to show useful examples of how a project can be used. Additional 
     $img =  new sezaicetin\Create\img('Company Name');
     $img->create(500, 500, '/img/notfound');
     ```
+  * Example 3
+    ```php
+    $img =  new sezaicetin\Create\img();
+    $img->sticky = 'Company Name';
+    $img->create(600, 600, '/img/notfound');
+    ```
+  * Example 4
+    ```php
+    $img =  new sezaicetin\Create\img('Company Name');
+    echo "<img src='".$img->create(300, 300, '/img/test.jpg')."' alt='Test Photo'>";
+    ```    
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
