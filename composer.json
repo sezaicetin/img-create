@@ -1,0 +1,14 @@
+{
+    "name": "sezaicetin/img-create",
+    "description": "Easy image creation and optimization with php",
+    "type": "library",
+    "keywords": ["php", "gd", "imagecreate", "optimization"],
+    "homepage": "https://github.com/sezaicetin/img-create",
+    "license": "MIT",
+    "authors": [{
+        "name": "Sezai Cetin", 
+        "email": "sezai@3xcode.com"
+    }],    
+    "minimum-stability": "stable",
+    "require": {}
+}
