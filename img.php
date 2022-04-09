@@ -81,6 +81,96 @@ class img
 				imagejpeg( $src );
 				imagedestroy( $src );
 			}
+			elseif($mtyp=="image/webp")
+			{
+				header("Content-Type: image/webp");
+				$source = imagecreatefromwebp( $d );
+				$width	= imagesx( $source );
+				$height	= imagesy( $source );
+			
+				if($h)
+				{
+					$w	= '';
+					$h	= $h;
+					$x  = ( $width * $h ) / $height;
+					$y  = $h;
+				}
+				elseif($w)
+				{
+					$w	= $w;
+					$h	= '';
+					$x  = $w;
+					$y  = ( $height * $w ) / $width;
+				}
+			
+				$src = imagecreatetruecolor( $x, $y );
+				imagecolortransparent( $src, imagecolorallocatealpha( $src, 0, 0, 0, 127 ) );
+				imagealphablending( $src, false );
+				imagesavealpha( $src, true );
+				imagecopyresampled( $src, $source, 0, 0, 0, 0, $x, $y, $width, $height );
+				imagewebp( $src );
+				imagedestroy( $src );
+			}	
+			elseif($mtyp=="image/gif")
+			{
+				header("Content-Type: image/gif");
+				$source = imagecreatefromgif( $d );
+				$width	= imagesx( $source );
+				$height	= imagesy( $source );
+			
+				if($h)
+				{
+					$w	= '';
+					$h	= $h;
+					$x  = ( $width * $h ) / $height;
+					$y  = $h;
+				}
+				elseif($w)
+				{
+					$w	= $w;
+					$h	= '';
+					$x  = $w;
+					$y  = ( $height * $w ) / $width;
+				}
+			
+				$src = imagecreatetruecolor( $x, $y );
+				imagecolortransparent( $src, imagecolorallocatealpha( $src, 0, 0, 0, 127 ) );
+				imagealphablending( $src, false );
+				imagesavealpha( $src, true );
+				imagecopyresampled( $src, $source, 0, 0, 0, 0, $x, $y, $width, $height );
+				imagegif( $src );
+				imagedestroy( $src );
+			}	
+			elseif($mtyp=="image/bmp")
+			{
+				header("Content-Type: image/png");
+				$source = imagecreatefrombmp( $d );
+				$width	= imagesx( $source );
+				$height	= imagesy( $source );
+			
+				if($h)
+				{
+					$w	= '';
+					$h	= $h;
+					$x  = ( $width * $h ) / $height;
+					$y  = $h;
+				}
+				elseif($w)
+				{
+					$w	= $w;
+					$h	= '';
+					$x  = $w;
+					$y  = ( $height * $w ) / $width;
+				}
+			
+				$src = imagecreatetruecolor( $x, $y );
+				imagecolortransparent( $src, imagecolorallocatealpha( $src, 0, 0, 0, 127 ) );
+				imagealphablending( $src, false );
+				imagesavealpha( $src, true );
+				imagecopyresampled( $src, $source, 0, 0, 0, 0, $x, $y, $width, $height );
+				imagepng( $src );
+				imagedestroy( $src );
+			}				
 		}
 		else
 		{

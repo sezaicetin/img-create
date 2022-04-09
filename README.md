@@ -47,7 +47,7 @@
   
 </div>
 
-Thanks to the GD library, we can re-create and send image files (png, jpg, etc.) in an html page in the dimensions we need before sending them to the browser. When the image files to be resized are not found, the default image is created automatically.
+Thanks to the GD library, we can re-create and send image files (png, jpg, bmp, webp, gif) in an html page in the dimensions we need before sending them to the browser. When the image files to be resized are not found, the default image is created automatically.
 
 What are the advantages of this for us?
 
