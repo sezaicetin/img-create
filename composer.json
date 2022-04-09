@@ -9,6 +9,11 @@
         "name": "Sezai Cetin", 
         "email": "sezai@3xcode.com"
     }],    
+    "autoload": {
+        "psr-4": {
+            "sezaicetin\\Create\\": "/"
+        }
+    },    
     "minimum-stability": "dev",
     "require": {}
 }
